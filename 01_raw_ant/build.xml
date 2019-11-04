@@ -1,0 +1,9 @@
+<project default="print_md5">
+  <property name="input_file" value="../jug_nsk_logo.jpg"/>
+  <target name="calculate_md5">
+    <checksum file="${input_file}" property="output_md5"/>
+  </target>
+  <target name="print_md5" depends="calculate_md5">
+    <echo message="The checksum of ${input_file} is ${output_md5}"/>
+  </target>
+</project>

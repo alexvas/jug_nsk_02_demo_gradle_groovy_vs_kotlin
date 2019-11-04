@@ -1,0 +1,11 @@
+task 'printMd5' {
+  doLast {
+    def inputFile = '../jug_nsk_logo.jpg'
+    ant.checksum(file = inputFile, property = 'output_md5')
+
+    def outputMd5 = ant.properties['output_md5']
+    println "The checksum of $inputFile is $outputMd5"
+  }
+}
+
+defaultTasks 'printMd5'

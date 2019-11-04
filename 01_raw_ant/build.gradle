@@ -1,0 +1,3 @@
+ant.importBuild(file('./build.xml'))
+
+defaultTasks 'print_md5'
